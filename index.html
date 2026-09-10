@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Tribe</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    
+
+    <main>
+
+        <section class="slide" id="the-tribe">
+            <div class="page">
+
+                <a href="#amstel-campus" class="main-link" aria-label="Ga naar Amstel Campus">
+                    <span class="main-folder Thetribe-folder">
+                        <span class="folder-paper">The tribe</span>
+                    </span>
+                </a>
+
+                <a href="#" class="folder-link tribe-folder-one" aria-label="Project folder één">
+                    <span class="folder"></span>
+                </a>
+
+                <a class="icon-link image-icon github-home" href="" target="_blank" rel="noopener noreferrer"
+                    aria-label="Bekijk mijn GitHub-profiel">
+                    <img src="github.svg.webp" alt="GitHub logo">
+                </a>
+
+                <a href="#" class="folder-link tribe-folder-two" aria-label="Project folder twee">
+                    <span class="folder"></span>
+                </a>
+
+                <div class="icon-link image-icon tribe-vscodium" aria-label="VSCodium">
+                    <img src="vscodium-icon.png" alt="VSCodium logo">
+                </div>
+            </div>
+
+            <a class="icon-link image-icon tribe-figma" href="" target="_blank" rel="noopener noreferrer" aria-label="">
+                <img src="figma.webp" alt="Figma logo">
+                </div>
+                </div> </a>
+
+            <a href="#" class="folder-link tribe-folder-three" aria-label="Project folder drie">
+                <span class="folder"></span>
+            </a>
+
+            <a href="#" class="folder-link tribe-folder-four" aria-label="Project folder vier">
+                <span class="folder"></span>
+            </a>
+
+            <a href="#" class="folder-link tribe-folder-five" aria-label="Project folder vijf">
+                <span class="folder"></span>
+            </a>
+
+            </div>
+        </section>
+
+        <section class="slide" id="amstel-campus">
+            <div class="page">
+
+                <a href="#the-tribe" class="main-link" aria-label="Ga terug naar The Tribe">
+                    <span class="main-title">Amstel Campus</span>
+                    <span class="main-folder"></span>
+                </a>
+
+                <button type="button" class="folder-link amstel-folder-one" data-title="Activiteit" data-text=""
+                    aria-label="Open activiteit">
+                    <span class="folder"></span>
+                </button>
+
+                <button type="button" class="folder-link amstel-folder-two" data-title="Restaurant" data-text=""
+                    aria-label="Open restaurant">
+                    <span class="folder"></span>
+                </button>
+
+                <button type="button" class="folder-link amstel-folder-three" data-title="Werk ruimtes" data-text=""
+                    aria-label="Open werk ruimtes">
+                    <span class="folder"></span>
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+
+            <button type="button" class="popup-close" id="popupClose" aria-label="Sluiten">
+                ×
+            </button>
+
+            <h2 id="popupTitle"></h2>
+            <p id="popupText"></p>
+
+        </div>
+    </div>
+
+    <script>
+        const popupOverlay = document.getElementById("popupOverlay");
+        const popupTitle = document.getElementById("popupTitle");
+        const popupText = document.getElementById("popupText");
+        const popupClose = document.getElementById("popupClose");
+
+        const amstelFolders = document.querySelectorAll(
+            ".amstel-folder-one, .amstel-folder-two, .amstel-folder-three"
+        );
+
+        amstelFolders.forEach((folder) => {
+            folder.addEventListener("click", () => {
+                popupTitle.textContent = folder.dataset.title;
+                popupText.textContent = folder.dataset.text;
+                popupOverlay.classList.add("show");
+            });
+        });
+
+        function closePopup() {
+            popupOverlay.classList.remove("show");
+        }
+
+        popupClose.addEventListener("click", closePopup);
+
+        popupOverlay.addEventListener("click", (event) => {
+            if (event.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closePopup();
+            }
+        });
+    </script>
+
 </body>
+
 </html>

@@ -1,0 +1,581 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #f4ede4;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    font: inherit;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    top: 22px;
+    left: 50%;
+    display: flex;
+    gap: clamp(12px, 2vw, 28px);
+    align-items: center;
+    padding: 10px 18px;
+    border: 2px solid #171717;
+    background: rgba(255, 254, 250, 0.7);
+    box-shadow: 4px 4px 0 #171717;
+    backdrop-filter: blur(8px);
+    transform: translateX(-50%);
+}
+
+.navbar a {
+    color: #171717;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+    color: #5d9fd1;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 45%,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.45) 28%,
+            rgba(244, 237, 228, 0) 68%),
+        #f4ede4;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.designer {
+    z-index: 2;
+    margin-bottom: clamp(-18px, -1.8vw, -8px);
+    font-family: "Brush Script MT", cursive;
+    font-size: clamp(64px, 13vw, 164px);
+    line-height: 0.7;
+    transform: rotate(-6deg);
+}
+
+.portfolio {
+    z-index: 1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(45px, 10vw, 135px);
+    font-weight: bold;
+    letter-spacing: clamp(-7px, -0.5vw, -3px);
+    line-height: 0.9;
+}
+
+.year {
+    align-self: flex-end;
+    margin-top: clamp(4px, 1vw, 14px);
+    margin-right: clamp(0px, 1vw, 25px);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 4vw, 55px);
+    font-style: italic;
+    letter-spacing: -2px;
+    transform: rotate(-5deg);
+}
+
+.folder-link,
+.main-link {
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.folder-link {
+    transition: transform 0.2s ease;
+}
+
+.folder-link:hover,
+.folder-link:focus-visible {
+    outline: none;
+    transform: translateY(-6px) scale(1.04) rotate(-1deg);
+}
+
+.folder {
+    position: relative;
+    display: block;
+    width: clamp(66px, 8vw, 120px);
+    height: clamp(48px, 5.8vw, 86px);
+    border-radius: 5px 5px 10px 10px;
+    background: linear-gradient(145deg, #a6ddfb, #5d9fd1);
+    box-shadow:
+        inset 0 3px 5px rgba(255, 255, 255, 0.6),
+        inset 0 -6px 7px rgba(28, 91, 137, 0.2),
+        0 4px 7px rgba(0, 0, 0, 0.16);
+}
+
+.folder::before {
+    position: absolute;
+    bottom: 88%;
+    left: 4px;
+    width: 46%;
+    height: 30%;
+    border-radius: 7px 13px 0 0;
+    background: linear-gradient(145deg, #c5edff, #72afd8);
+    content: "";
+}
+
+.main-link {
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+}
+
+.main-link:hover,
+.main-link:focus-visible {
+    outline: none;
+    transform: translate(-50%, calc(-50% - 6px)) scale(1.04) rotate(-1deg);
+}
+
+.main-title {
+    z-index: 5;
+    margin-bottom: -6px;
+    padding: 8px 10px;
+    background: #fffefa;
+    color: #171717;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 3vw, 44px);
+    font-weight: normal;
+    line-height: 0.95;
+    text-align: center;
+}
+
+.main-folder {
+    position: relative;
+    display: block;
+    width: clamp(170px, 22vw, 320px);
+    height: clamp(125px, 16vw, 225px);
+    border-radius: 12px 12px 20px 20px;
+    background: linear-gradient(145deg, #a6ddfb, #5d9fd1);
+    box-shadow:
+        inset 0 6px 8px rgba(255, 255, 255, 0.6),
+        inset 0 -10px 12px rgba(28, 91, 137, 0.22),
+        0 8px 14px rgba(0, 0, 0, 0.16);
+}
+
+.main-folder::before {
+    position: absolute;
+    bottom: 88%;
+    left: 8px;
+    width: 45%;
+    height: 31%;
+    border-radius: 12px 18px 0 0;
+    background: linear-gradient(145deg, #c5edff, #72afd8);
+    content: "";
+}
+
+.Thetribe-folder {
+    overflow: visible;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.Thetribe-folder::before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 8px;
+    width: 45%;
+    height: 31%;
+    border-radius: 12px 18px 0 0;
+    background: linear-gradient(145deg, #c5edff, #72afd8);
+    content: "";
+}
+
+.Thetribe-folder::after {
+    position: absolute;
+    z-index: 3;
+    top: 23%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(145deg, #a6ddfb, #5d9fd1);
+    box-shadow:
+        inset 0 6px 8px rgba(255, 255, 255, 0.6),
+        inset 0 -10px 12px rgba(28, 91, 137, 0.22),
+        0 8px 14px rgba(0, 0, 0, 0.16);
+    content: "";
+}
+
+.folder-paper {
+    position: absolute;
+    z-index: 4;
+    top: -24%;
+    left: 19%;
+    display: flex;
+    width: 63%;
+    height: 67%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid #171717;
+    background: #fffefa;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.14);
+    color: #171717;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 3vw, 44px);
+    line-height: 0.95;
+    text-align: center;
+    transform: rotate(-2deg);
+}
+
+.image-icon {
+    position: absolute;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.image-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.github-home {
+    top: 40%;
+    left: 80%;
+    width: clamp(48px, 6vw, 82px);
+    height: clamp(48px, 6vw, 82px);
+}
+
+.tribe-vscodium {
+    top: 13%;
+    left: 48%;
+    width: clamp(40px, 5vw, 68px);
+    height: clamp(40px, 5vw, 68px);
+}
+
+.tribe-figma {
+    top: 42%;
+    left: 20%;
+    width: clamp(65px, 8vw, 115px);
+    height: clamp(65px, 8vw, 115px);
+}
+
+.home-folder-one {
+    top: 24%;
+    left: 14%;
+}
+
+.home-folder-two {
+    right: 14%;
+    bottom: 22%;
+}
+
+.home-folder-three {
+    bottom: 14%;
+    left: 20%;
+}
+
+.tribe-folder-one {
+    top: 12%;
+    left: 11%;
+}
+
+.tribe-folder-two {
+    top: 12%;
+    right: 11%;
+}
+
+.tribe-folder-three {
+    bottom: 14%;
+    left: 11%;
+}
+
+.tribe-folder-four {
+    right: 47%;
+    bottom: 9%;
+}
+
+.tribe-folder-five {
+    right: 11%;
+    bottom: 12%;
+}
+
+.amstel-folder-one {
+    bottom: 14%;
+    left: 14%;
+}
+
+.amstel-folder-two {
+    right: 47%;
+    bottom: 14%;
+}
+
+.amstel-folder-three {
+    right: 14%;
+    bottom: 14%;
+}
+
+.popup-overlay {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    display: none;
+    place-items: center;
+    padding: 20px;
+    background: rgba(23, 23, 23, 0.28);
+}
+
+.popup-overlay.show {
+    display: grid;
+}
+
+.popup-box {
+    position: relative;
+    width: min(680px, calc(100vw - 40px));
+    padding: clamp(26px, 5vw, 54px);
+    border: 3px solid #171717;
+    background: #fffefa;
+    box-shadow: 8px 8px 0 #171717;
+}
+
+.popup-box h2 {
+    margin: 0 35px 16px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(28px, 5vw, 54px);
+    line-height: 1;
+}
+
+.popup-box p {
+    max-width: 55ch;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(16px, 2vw, 21px);
+    line-height: 1.5;
+}
+
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: transparent;
+    color: #171717;
+    cursor: pointer;
+    font-size: 38px;
+    line-height: 1;
+}
+
+.popup-close:hover,
+.popup-close:focus-visible {
+    color: #5d9fd1;
+    outline: none;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        top: 14px;
+        gap: 10px;
+        padding: 8px 11px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .folder {
+        width: 50px;
+        height: 38px;
+    }
+
+    .folder::before {
+        top: -7px;
+        bottom: auto;
+        left: 3px;
+        width: 22px;
+        height: 10px;
+    }
+
+    .main-folder {
+        width: 100px;
+        height: 75px;
+    }
+
+    .main-folder::before {
+        top: -13px;
+        bottom: auto;
+        left: 5px;
+        width: 45px;
+        height: 18px;
+    }
+
+    .Thetribe-folder::before {
+        top: 0;
+        left: 5px;
+        width: 45px;
+        height: 18px;
+    }
+
+    .folder-paper {
+        top: -23px;
+        left: 15px;
+        width: 70px;
+        height: 35px;
+        padding: 4px;
+        font-size: 14px;
+    }
+
+    .main-title {
+        padding: 5px 7px;
+        font-size: 18px;
+    }
+
+    .github-home {
+        top: 27%;
+        left: 50%;
+        width: 36px;
+        height: 36px;
+        margin-left: -18px;
+    }
+
+    .tribe-vscodium {
+        top: 14%;
+        left: 50%;
+        width: 36px;
+        height: 36px;
+        margin-left: -18px;
+    }
+
+    .tribe-figma {
+        top: 7%;
+        right: 8%;
+        left: auto;
+        width: 36px;
+        height: 36px;
+    }
+
+    .home-folder-one {
+        top: 20%;
+        left: 8%;
+    }
+
+    .home-folder-two {
+        right: 8%;
+        bottom: 20%;
+    }
+
+    .home-folder-three {
+        bottom: 12%;
+        left: 10%;
+    }
+
+    .tribe-folder-one {
+        top: 5%;
+        left: 8%;
+    }
+
+    .tribe-folder-two {
+        top: 20%;
+        right: 8%;
+    }
+
+    .tribe-folder-three {
+        bottom: 17%;
+        left: 8%;
+    }
+
+    .tribe-folder-four {
+        right: 50%;
+        bottom: 12%;
+        margin-right: -25px;
+    }
+
+    .tribe-folder-five {
+        right: 8%;
+        bottom: 12%;
+    }
+
+    .amstel-folder-one {
+        bottom: 17%;
+        left: 8%;
+    }
+
+    .amstel-folder-two {
+        right: 50%;
+        bottom: 17%;
+        margin-right: -25px;
+    }
+
+    .amstel-folder-three {
+        right: 8%;
+        bottom: 17%;
+    }
+
+    .popup-box {
+        padding: 28px 24px;
+        box-shadow: 5px 5px 0 #171717;
+    }
+
+    .popup-close {
+        top: 8px;
+        right: 10px;
+    }
+}
