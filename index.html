@@ -60,30 +60,217 @@
         </section>
 
         <section class="slide" id="amstel-campus">
-            <div class="page">
+  <div class="page">
 
-                <a href="#the-tribe" class="main-link" aria-label="Ga terug naar The Tribe">
-                    <span class="main-title">Amstel Campus</span>
-                    <span class="main-folder"></span>
-                </a>
+    <a href="#the-tribe" class="main-link" aria-label="Ga terug naar The Tribe">
+      <span class="main-title">Amstel Campus</span>
+      <span class="main-folder"></span>
+    </a>
 
-                <button type="button" class="folder-link amstel-folder-one" data-title="Activiteit" data-text=""
-                    aria-label="Open activiteit">
-                    <span class="folder"></span>
-                </button>
+    <button
+      class="folder-link amstel-folder-one"
+      popovertarget="wibauthuis-popover"
+      aria-label="Open Wibauthuis">
 
-                <button type="button" class="folder-link amstel-folder-two" data-title="Restaurant" data-text=""
-                    aria-label="Open restaurant">
-                    <span class="folder"></span>
-                </button>
+      <span class="folder"></span>
+      <span class="folder-name">Wibauthuis</span>
+    </button>
 
-                <button type="button" class="folder-link amstel-folder-three" data-title="Werk ruimtes" data-text=""
-                    aria-label="Open werk ruimtes">
-                    <span class="folder"></span>
-                </button>
+    <button
+      class="folder-link amstel-folder-two"
+      popovertarget="theo-popover"
+      aria-label="Open Theo Thijssenhuis">
 
-            </div>
-        </section>
+      <span class="folder"></span>
+      <span class="folder-name">Theo Thijssenhuis</span>
+    </button>
+
+    <button
+      class="folder-link amstel-folder-three"
+      popovertarget="kohnstamm-popover"
+      aria-label="Open Kohnstammhuis">
+
+      <span class="folder"></span>
+      <span class="folder-name">Kohnstammhuis</span>
+    </button>
+
+  </div>
+
+
+  <!-- WIBAUTHUIS POPOVER -->
+
+  <div class="campus-window" id="wibauthuis-popover" popover>
+
+    <header class="window-header">
+      <h2>Wibauthuis</h2>
+
+      <button
+        class="close-button"
+        popovertarget="wibauthuis-popover"
+        popovertargetaction="hide">
+        ×
+      </button>
+    </header>
+
+    <div class="window-content">
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Wibauthuis</h3>
+          <p><strong>Wibautstraat</strong></p>
+          <p>
+            Het Wibauthuis is een van de grote gebouwen
+            van de Amstelcampus.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Studieplekken</h3>
+          <p><strong>1e en 2e verdieping</strong></p>
+          <p>
+            Hier kun je individueel werken of samen
+            met je team aan opdrachten werken.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Restaurant</h3>
+          <p><strong>Begane grond</strong></p>
+          <p>
+            Een plek waar je lunch, snacks en drinken
+            kunt halen tijdens je schooldag.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+
+  <!-- THEO THIJSSENHUIS POPOVER -->
+
+  <div class="campus-window" id="theo-popover" popover>
+
+    <header class="window-header">
+      <h2>Theo Thijssenhuis</h2>
+
+      <button
+        class="close-button"
+        popovertarget="theo-popover"
+        popovertargetaction="hide">
+        ×
+      </button>
+    </header>
+
+    <div class="window-content">
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Theo Thijssenhuis</h3>
+          <p><strong>Amstelcampus</strong></p>
+          <p>
+            Een van de HvA-gebouwen op de Amstelcampus.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Restaurant</h3>
+          <p><strong>Begane grond</strong></p>
+          <p>
+            Hier kun je iets eten of drinken tijdens je pauze.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Studieplekken</h3>
+          <p>
+            Verschillende plekken om te studeren en aan opdrachten te werken.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+
+  <!-- KOHNSTAMMHUIS POPOVER -->
+
+  <div class="campus-window" id="kohnstamm-popover" popover>
+
+    <header class="window-header">
+      <h2>Kohnstammhuis</h2>
+
+      <button
+        class="close-button"
+        popovertarget="kohnstamm-popover"
+        popovertargetaction="hide">
+        ×
+      </button>
+    </header>
+
+    <div class="window-content">
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Kohnstammhuis</h3>
+          <p><strong>Amstelcampus</strong></p>
+          <p>
+            In het Kohnstammhuis vind je verschillende studievoorzieningen.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Broedplaats</h3>
+          <p><strong>1e verdieping</strong></p>
+          <p>
+            Een fijne plek om samen te werken, te overleggen
+            of aan een project te werken.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image"></div>
+
+        <div>
+          <h3>Bibliotheek</h3>
+          <p>
+            Een rustige plek om te studeren en gebruik te maken
+            van verschillende voorzieningen.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
 
     </main>
 
