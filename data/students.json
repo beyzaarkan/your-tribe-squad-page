@@ -1,12 +1,12 @@
 [
     {
         "name": "Ahmed",
-        "image": "../assets/students/ahmet.png",
+        "image": "assets/students/ahmet.png",
         "link": "https://temhasene.github.io/your-tribe-profile-card/"
     },
     {
         "name": "Aliya",
-        "image": "../assets/students/aliya.png",
+        "image": "assets/students/aliya.png",
         "link": "https://aliyaharding.github.io/your-tribe-profile-card/"
     },
     {
