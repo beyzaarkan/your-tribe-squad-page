@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Tribe</title>
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -14,6 +15,7 @@
     <main>
 
         <section class="slide" id="the-tribe">
+
             <div class="page">
 
                 <a href="#amstel-campus" class="main-link" aria-label="Ga naar Amstel Campus">
@@ -26,7 +28,10 @@
                     <span class="folder"></span>
                 </a>
 
-                <a class="icon-link image-icon github-home" href="" target="_blank" rel="noopener noreferrer"
+                <a class="icon-link image-icon github-home"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Bekijk mijn GitHub-profiel">
                     <img src="assets/github.svg.webp" alt="GitHub logo">
                 </a>
@@ -38,29 +43,53 @@
                 <div class="icon-link image-icon tribe-vscodium" aria-label="VSCodium">
                     <img src="assets/vscodium-icon.png" alt="VSCodium logo">
                 </div>
+
+                <a class="icon-link image-icon tribe-figma"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Figma">
+                    <img src="assets/figma.webp" alt="Figma logo">
+                </a>
+
+                <a href="#" class="folder-link tribe-folder-three" aria-label="Project folder drie">
+                    <span class="folder"></span>
+                </a>
+
+                <a href="#" class="folder-link tribe-folder-four" aria-label="Project folder vier">
+                    <span class="folder"></span>
+                </a>
+
+                <a href="#" class="folder-link tribe-folder-five" aria-label="Project folder vijf">
+                    <span class="folder"></span>
+                </a>
+
             </div>
 
-            <a class="icon-link image-icon tribe-figma" href="" target="_blank" rel="noopener noreferrer" aria-label="">
-                <img src="assets/figma.webp" alt="Figma logo">
-                </div>
-                </div> </a>
+            <!-- STUDENTEN -->
+            <section class="students">
 
-            <a href="#" class="folder-link tribe-folder-three" aria-label="Project folder drie">
-                <span class="folder"></span>
-            </a>
+                <div class="student" id="student-1"></div>
+                <div class="student" id="student-2"></div>
+                <div class="student" id="student-3"></div>
+                <div class="student" id="student-4"></div>
+                <div class="student" id="student-5"></div>
 
-            <a href="#" class="folder-link tribe-folder-four" aria-label="Project folder vier">
-                <span class="folder"></span>
-            </a>
+            </section>
 
-            <a href="#" class="folder-link tribe-folder-five" aria-label="Project folder vijf">
-                <span class="folder"></span>
-            </a>
+            <!-- PIJLEN -->
+            <button class="arrow arrow-left" id="previous" type="button" aria-label="Vorige studenten">
+                &#8592;
+            </button>
 
-            </div>
+            <button class="arrow arrow-right" id="next" type="button" aria-label="Volgende studenten">
+                &#8594;
+            </button>
+
         </section>
 
         <section class="slide" id="amstel-campus">
+
             <div class="page">
 
                 <a href="#the-tribe" class="main-link" aria-label="Ga terug naar The Tribe">
@@ -68,30 +97,47 @@
                     <span class="main-folder"></span>
                 </a>
 
-                <button type="button" class="folder-link amstel-folder-one" data-title="Activiteit" data-text=""
+                <button type="button"
+                    class="folder-link amstel-folder-one"
+                    data-title="Activiteit"
+                    data-text=""
                     aria-label="Open activiteit">
                     <span class="folder"></span>
                 </button>
 
-                <button type="button" class="folder-link amstel-folder-two" data-title="Restaurant" data-text=""
+                <button type="button"
+                    class="folder-link amstel-folder-two"
+                    data-title="Restaurant"
+                    data-text=""
                     aria-label="Open restaurant">
                     <span class="folder"></span>
                 </button>
 
-                <button type="button" class="folder-link amstel-folder-three" data-title="Werk ruimtes" data-text=""
+                <button type="button"
+                    class="folder-link amstel-folder-three"
+                    data-title="Werk ruimtes"
+                    data-text=""
                     aria-label="Open werk ruimtes">
                     <span class="folder"></span>
                 </button>
 
             </div>
+
         </section>
 
     </main>
 
     <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
 
-            <button type="button" class="popup-close" id="popupClose" aria-label="Sluiten">
+        <div class="popup-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="popupTitle">
+
+            <button type="button"
+                class="popup-close"
+                id="popupClose"
+                aria-label="Sluiten">
                 ×
             </button>
 
@@ -99,10 +145,12 @@
             <p id="popupText"></p>
 
         </div>
+
     </div>
 
-       <script src="scripts/script.js"></script>
-       <script src="scripts/studenten.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/studenten.js"></script>
+
 </body>
 
 </html>
