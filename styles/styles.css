@@ -1,0 +1,77 @@
+
+
+.student.changing {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+
+/* link */
+.student a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.student img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+/* naam */
+.student p {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* hover */
+.student a:hover img {
+    transform: scale(1.08);
+    opacity: 0.8;
+}
+
+/* pijlen */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 42px;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 20;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.arrow:hover {
+    opacity: 0.5;
+}
+
+/* Linker pijl */
+.arrow-left {
+    left: 3%;
+}
+
+/* Rechter pijl */
+.arrow-right {
+    right: 3%;
+}
+
+/* animatie */
+.student.changing {
+    opacity: 0;
+}
