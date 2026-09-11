@@ -19,46 +19,6 @@ button {
     font: inherit;
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    clip-path: inset(50%);
-}
-
-.navbar {
-    position: fixed;
-    z-index: 100;
-    top: 22px;
-    left: 50%;
-    display: flex;
-    gap: clamp(12px, 2vw, 28px);
-    align-items: center;
-    padding: 10px 18px;
-    border: 2px solid #171717;
-    background: rgba(255, 254, 250, 0.7);
-    box-shadow: 4px 4px 0 #171717;
-    backdrop-filter: blur(8px);
-    transform: translateX(-50%);
-}
-
-.navbar a {
-    color: #171717;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color 0.2s ease;
-}
-
-.navbar a:hover,
-.navbar a:focus-visible {
-    color: #5d9fd1;
-}
 
 .slide {
     width: 100%;
@@ -75,51 +35,13 @@ button {
     height: 100%;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 50% 45%,
+        radial-gradient(
+            ellipse at 50% 45%,
             rgba(255, 255, 255, 0.95) 0%,
             rgba(255, 255, 255, 0.45) 28%,
-            rgba(244, 237, 228, 0) 68%),
+            rgba(244, 237, 228, 0) 68%
+        ),
         #f4ede4;
-}
-
-.hero-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
-
-.designer {
-    z-index: 2;
-    margin-bottom: clamp(-18px, -1.8vw, -8px);
-    font-family: "Brush Script MT", cursive;
-    font-size: clamp(64px, 13vw, 164px);
-    line-height: 0.7;
-    transform: rotate(-6deg);
-}
-
-.portfolio {
-    z-index: 1;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(45px, 10vw, 135px);
-    font-weight: bold;
-    letter-spacing: clamp(-7px, -0.5vw, -3px);
-    line-height: 0.9;
-}
-
-.year {
-    align-self: flex-end;
-    margin-top: clamp(4px, 1vw, 14px);
-    margin-right: clamp(0px, 1vw, 25px);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(26px, 4vw, 55px);
-    font-style: italic;
-    letter-spacing: -2px;
-    transform: rotate(-5deg);
 }
 
 .folder-link,
@@ -317,20 +239,6 @@ button {
     height: clamp(65px, 8vw, 115px);
 }
 
-.home-folder-one {
-    top: 24%;
-    left: 14%;
-}
-
-.home-folder-two {
-    right: 14%;
-    bottom: 22%;
-}
-
-.home-folder-three {
-    bottom: 14%;
-    left: 20%;
-}
 
 .tribe-folder-one {
     top: 12%;
@@ -431,15 +339,6 @@ button {
 }
 
 @media (max-width: 650px) {
-    .navbar {
-        top: 14px;
-        gap: 10px;
-        padding: 8px 11px;
-    }
-
-    .navbar a {
-        font-size: 11px;
-    }
 
     .folder {
         width: 50px;
@@ -510,21 +409,6 @@ button {
         left: auto;
         width: 36px;
         height: 36px;
-    }
-
-    .home-folder-one {
-        top: 20%;
-        left: 8%;
-    }
-
-    .home-folder-two {
-        right: 8%;
-        bottom: 20%;
-    }
-
-    .home-folder-three {
-        bottom: 12%;
-        left: 10%;
     }
 
     .tribe-folder-one {
