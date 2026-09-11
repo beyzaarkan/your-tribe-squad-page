@@ -1,10 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    min-height: 100vh;
+    background-color: #eeeadd;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* studenten */
+.students {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+
+/* individuele studenten */
+.student {
+    position: absolute;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    pointer-events: auto;
+}
 
 .student.changing {
     opacity: 0;
     transform: translateY(10px);
 }
 
+/* posities */
+#student-1 {
+    left: 20%;
+    top: 15%;
+}
+
+#student-2 {
+    right: 20%;
+    top: 15%;
+}
+
+#student-3 {
+    left: 10%;
+    top: 60%;
+}
+
+#student-4 {
+    right: 10%;
+    top: 60%;
+}
+
+#student-5 {
+    left: 40%;
+    bottom: 10%;
+}
 
 /* link */
 .student a {
