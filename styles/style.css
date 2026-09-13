@@ -219,21 +219,21 @@ button {
 }
 
 .github-home {
-    top: 40%;
+    top: 42%;
     left: 80%;
-    width: clamp(48px, 6vw, 82px);
-    height: clamp(48px, 6vw, 82px);
+    width: clamp(46px, 6vw, 82px);
+    height: clamp(46px, 6vw, 82px);
 }
 
 .tribe-vscodium {
     top: 13%;
-    left: 48%;
+    left: 47%;
     width: clamp(40px, 5vw, 68px);
     height: clamp(40px, 5vw, 68px);
 }
 
 .tribe-figma {
-    top: 42%;
+    top: 40%;
     left: 20%;
     width: clamp(65px, 8vw, 115px);
     height: clamp(65px, 8vw, 115px);
@@ -280,7 +280,7 @@ button {
     bottom: 14%;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
 
     .folder {
         width: 50px;
@@ -330,27 +330,27 @@ button {
     }
 
     .github-home {
-        top: 27%;
-        left: 50%;
-        width: 36px;
+        top: 25%;
+        left: 13%;
+        width: 50px;
         height: 36px;
         margin-left: -18px;
     }
 
     .tribe-vscodium {
-        top: 14%;
+        top: 5%;
         left: 50%;
-        width: 36px;
+        width: 50px;
         height: 36px;
         margin-left: -18px;
     }
 
     .tribe-figma {
-        top: 7%;
+        top: 25%;
         right: 8%;
         left: auto;
-        width: 36px;
-        height: 36px;
+        width: 70px;
+        height: 40px;
     }
 
     .tribe-folder-one {
@@ -405,4 +405,3 @@ button {
         right: 10px;
     }
 }
-git status
