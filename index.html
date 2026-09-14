@@ -82,43 +82,37 @@
         <section class="slide" id="amstel-campus">
   <div class="page">
 
-    <a href="#the-tribe" class="main-link">Ga terug naar The Tribe</a>
-  <span class="main-folder Thetribe-folder">
-    <span class="folder-paper">Amstel Campus</span>
-  </span>
-</a>
+    <a href="#the-tribe" class="main-link" aria-label="Ga terug naar The Tribe">
+      <span class="main-folder Thetribe-folder">
+        <span class="folder-paper">Amstel Campus</span>
+      </span>
+    </a>
 
-          <button
-            type="button"
-            class="folder-link amstel-folder-one"
-            data-title="Activiteit"
-            data-text=""
-            
-          >
-            <span class="folder"></span>
-          </button>
+    <button
+      class="folder-link amstel-folder-one"
+      popovertarget="wibauthuis-popover"
+      aria-label="Open Wibauthuis">
+      <span class="folder"></span>
+      <span class="folder-name">Wibauthuis</span>
+    </button>
 
-          <button
-            type="button"
-            class="folder-link amstel-folder-two"
-            data-title="Restaurant"
-            data-text=""
-            
-          >
-            <span class="folder"></span>
-          </button>
+    <button
+      class="folder-link amstel-folder-two"
+      popovertarget="theo-popover"
+      aria-label="Open Theo Thijssenhuis">
+      <span class="folder"></span>
+      <span class="folder-name">Theo Thijssenhuis</span>
+    </button>
 
     <button
       class="folder-link amstel-folder-three"
       popovertarget="kohnstamm-popover"
-      
-
+      aria-label="Open Kohnstammhuis">
       <span class="folder"></span>
       <span class="folder-name">Kohnstammhuis</span>
     </button>
 
   </div>
-
 
   <!-- WIBAUTHUIS POPOVER -->
 
@@ -130,7 +124,8 @@
       <button
         class="close-button"
         popovertarget="wibauthuis-popover"
-        popovertargetaction="hide">
+        popovertargetaction="hide"
+        aria-label="Sluit Wibauthuis">
         ×
       </button>
     </header>
@@ -138,20 +133,29 @@
     <div class="window-content">
 
       <article class="place">
-        <div class="place-image"></div>
+        <div class="place-image">
+  <img
+    src="assets/wibauthuis-bezinningsruimte.jpeg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
 
         <div>
-          <h3>Wibauthuis</h3>
-          <p><strong>Wibautstraat</strong></p>
+          <h3>Bezinningsruimte</h3>
+          <p><strong>2de verdieping</strong></p>
           <p>
-            Het Wibauthuis is een van de grote gebouwen
-            van de Amstelcampus.
+            Een rustige plek waar studenten terechtkunnen voor gebed, bezinning of een moment voor zichzelf.
           </p>
         </div>
       </article>
 
       <article class="place">
-        <div class="place-image"></div>
+        <div class="place-image">
+  <img
+    src="assets/wibauthuis-studieplek.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
 
         <div>
           <h3>Studieplekken</h3>
@@ -164,7 +168,12 @@
       </article>
 
       <article class="place">
-        <div class="place-image"></div>
+        <div class="place-image">
+  <img
+    src="assets/wibauthuis-restaurant.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
 
         <div>
           <h3>Restaurant</h3>
@@ -179,67 +188,73 @@
     </div>
   </div>
 
-
   <!-- THEO THIJSSENHUIS POPOVER -->
 
-  <div
-    class="campus-window"
-    id="theo-popover"
-    popover>
+  <div class="campus-window" id="theo-popover" popover>
 
     <header class="window-header">
-        <h2>Theo Thijssenhuis</h2>
+      <h2>Theo Thijssenhuis</h2>
 
-        <button
-            class="close-button"
-            popovertarget="theo-popover"
-            popovertargetaction="hide">
-            ×
-        </button>
+      <button
+        class="close-button"
+        popovertarget="theo-popover"
+        popovertargetaction="hide"
+        aria-label="Sluit Theo Thijssenhuis">
+        ×
+      </button>
     </header>
 
     <div class="window-content">
 
-        <article class="place">
-            <div class="place-image"></div>
-
-            <div>
-                <h3>Theo Thijssenhuis</h3>
-                <p><strong>Amstelcampus</strong></p>
-                <p>
-                    Een van de HvA-gebouwen op de Amstelcampus.
-                </p>
-            </div>
-        </article>
-
-        <article class="place">
-            <div class="place-image"></div>
-
-            <div>
-                <h3>Medialounge</h3>
-                <p><strong>3e verdieping</strong></p>
-                <p>
-                    Een fijne werkplek om samen met je team te zitten,
-                    te overleggen en aan projecten te werken.
-                </p>
-            </div>
-        </article>
-
-        <article class="place">
-            <div class="place-image"></div>
-
-            <div>
-                <h3>Restaurant</h3>
-                <p><strong>Begane grond</strong></p>
-                <p>
-                    Hier kun je iets eten of drinken tijdens je pauze.
-                </p>
-            </div>
-        </article>
-
-    </div>
+      <article class="place">
+        <div class="place-image">
+  <img
+    src="assets/tth-makerslab.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
 </div>
 
+        <div>
+          <h3>Makerslab</h3>
+          <p><strong>Ruimte 00B20</strong></p>
+          <p>
+              Een open werkplaats voor HvA-studenten waar je kunt experimenteren en dingen kunt maken met onder andere 3D-printers, lasersnijders en andere gereedschappen.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image">
+  <img
+    src="assets/tth-medialounge.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
+
+        <div>
+          <h3>Medialounge</h3>
+          <p><strong>3e verdieping</strong></p>
+          <p>
+            Een fijne werkplek om samen met je team te zitten,
+            te overleggen en aan projecten te werken.
+          </p>
+        </div>
+      </article>
+
+      <article class="place">
+        <div class="place-image">foto nemen</div>
+
+        <div>
+          <h3>Stille werkplek</h3>
+          <p><strong>4e verdieping</strong></p>
+          <p>
+            Een rustige plek waar je je even kunt afzonderen om geconcentreerd aan je werk te zitten.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
 
   <!-- KOHNSTAMMHUIS POPOVER -->
 
@@ -251,7 +266,8 @@
       <button
         class="close-button"
         popovertarget="kohnstamm-popover"
-        popovertargetaction="hide">
+        popovertargetaction="hide"
+        aria-label="Sluit Kohnstammhuis">
         ×
       </button>
     </header>
@@ -259,38 +275,52 @@
     <div class="window-content">
 
       <article class="place">
-        <div class="place-image"></div>
+        <div class="place-image">
+  <img
+    src="assets/ksh-kohnstammhof.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
 
         <div>
-          <h3>Kohnstammhuis</h3>
-          <p><strong>Amstelcampus</strong></p>
+          <h3>Kohnstammhof</h3>
+          <p><strong>Tussen het Kohnstammhuis en Theo Thijssenhuis</strong></p>
           <p>
-            In het Kohnstammhuis vind je verschillende studievoorzieningen.
+              Een buitenplein waar je tussen de lessen door kunt zitten, lunchen of even van de zon kunt genieten.
           </p>
         </div>
       </article>
 
       <article class="place">
-        <div class="place-image"></div>
+        <div class="place-image">
+  <img
+    src="assets/ksh-food.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
 
         <div>
-          <h3>Broedplaats</h3>
+          <h3>Food shop</h3>
           <p><strong>1e verdieping</strong></p>
           <p>
-            Een fijne plek om samen te werken, te overleggen
-            of aan een project te werken.
+             Een handige plek om tussen de lessen door iets te eten of drinken te halen.
           </p>
         </div>
       </article>
 
       <article class="place">
-        <div class="place-image"></div>
+        <div class="place-image">
+  <img
+    src="assets/ksh-bieb.jpg"
+    alt="Studieplek in het Wibauthuis"
+  />
+</div>
 
         <div>
           <h3>Bibliotheek</h3>
           <p>
-            Een rustige plek om te studeren en gebruik te maken
-            van verschillende voorzieningen.
+              Hier kun je rustig studeren, aan opdrachten werken en boeken of andere studiematerialen gebruiken.
+
           </p>
         </div>
       </section>
@@ -300,14 +330,14 @@
       <div
         class="popup-box"
         role="dialog"
-        
-        
+        aria-modal="true"
+        aria-labelledby="popupTitle"
       >
         <button
           type="button"
           class="popup-close"
           id="popupClose"
-          
+          aria-label="Sluiten"
         >
           ×
         </button>
