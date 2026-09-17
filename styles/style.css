@@ -35,12 +35,10 @@ button {
     height: 100%;
     overflow: hidden;
     background:
-        radial-gradient(
-            ellipse at 50% 45%,
+        radial-gradient(ellipse at 50% 45%,
             rgba(255, 255, 255, 0.95) 0%,
             rgba(255, 255, 255, 0.45) 28%,
-            rgba(244, 237, 228, 0) 68%
-        ),
+            rgba(244, 237, 228, 0) 68%),
         #f4ede4;
 }
 
@@ -460,10 +458,7 @@ button {
 #amstel-campus .amstel-folder-two:hover,
 #amstel-campus .amstel-folder-two:focus-visible {
     transform:
-        translateX(-50%)
-        translateY(-6px)
-        scale(1.04)
-        rotate(-1deg);
+        translateX(-50%) translateY(-6px) scale(1.04) rotate(-1deg);
 }
 
 
@@ -681,5 +676,134 @@ button {
 
     .place p {
         font-size: 14px;
+    }
+}
+
+/* ================================= */
+/* THE TRIBE - FOTO'S ALLEEN MOBILE  */
+/* ================================= */
+
+/* Desktop/tablet: foto's verbergen */
+#the-tribe .tribe-mobile-photo {
+    display: none;
+}
+
+
+/* ================================= */
+/* MOBILE THE TRIBE                  */
+/* ================================= */
+
+@media (max-width: 650px) {
+
+    /* Alleen The Tribe hoofdmap groter op mobiel */
+    #the-tribe .Thetribe-folder {
+        width: 350px;
+        height: 130px;
+    }
+
+    #the-tribe .Thetribe-folder::before {
+        top: 0;
+        left: 7px;
+        width: 58px;
+        height: 20px;
+    }
+
+    #the-tribe .Thetribe-folder::after {
+        top: 23%;
+    }
+
+    #the-tribe .Thetribe-folder .folder-paper {
+        top: -23px;
+        left: 20px;
+        width: 90px;
+        height: 35px;
+        padding: 4px;
+        font-size: 14px;
+    }
+
+    /* Kleine mapjes in The Tribe */
+    #the-tribe .folder {
+        width: 50px;
+        height: 38px;
+    }
+
+    #the-tribe .folder::before {
+        top: -7px;
+        bottom: auto;
+        left: 3px;
+        width: 22px;
+        height: 10px;
+    }
+
+    /* Icons op mobile */
+    #the-tribe .github-home {
+        top: 33%;
+        left: 10%;
+        width: 70px;
+        height: 65px;
+        margin-left: -18px;
+    }
+
+    #the-tribe .tribe-vscodium {
+        top: 15%;
+        left: 47%;
+        width: 70px;
+        height: 65px;
+        margin-left: -18px;
+    }
+
+    #the-tribe .tribe-figma {
+        top: 30%;
+        right: 8%;
+        left: 15;
+        width: 120px;
+        height: 65px;
+    }
+
+    /* Foto's zichtbaar maken op mobile */
+    #the-tribe .tribe-mobile-photo {
+        position: absolute;
+        z-index: 20;
+
+        display: block;
+
+        width: 90px;
+        height: auto;
+
+        padding: 0;
+        margin: 0;
+
+        border: none;
+        outline: none;
+        border-radius: 0;
+
+        background: transparent;
+        box-shadow: none;
+
+        overflow: visible;
+        object-fit: contain;
+    }
+
+
+    #the-tribe .tribe-mobile-photo-one {
+        top: 77%;
+        left: 18%;
+        width: 70px;
+        height: 65px;
+    }
+
+    #the-tribe .tribe-mobile-photo-two {
+        top: 77%;
+        right: 18%;
+        width: 70px;
+        height: 65px;
+    }
+
+    #the-tribe .tribe-mobile-photo-three {
+        bottom: 30%;
+        left: 53%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 65px;
     }
 }
