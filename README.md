@@ -50,14 +50,14 @@ Teamleden
 
 * Lou van Beek – Development
 * Lou van Beek – zorgen dat je van personen kan wisselen op de pagina's
-* Younes – 
-* Beyza – 
+* 
+* 
 
 Meer informatie over ons en onze projecten is te vinden op onze persoonlijke portfolio’s/profielpagina’s:
 
-* Lou van Beek
-* Younes 
-* Beyza 
+* 
+* 
+* 
 
 ⸻
 
