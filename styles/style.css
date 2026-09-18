@@ -807,3 +807,127 @@ button {
         height: 65px;
     }
 }
+
+/* ================================= */
+/* MOBILE AMSTEL CAMPUS - BEYZA      */
+/* ================================= */
+
+@media (max-width: 650px) {
+
+    /* Grote Amstel Campus widget */
+    #amstel-campus .main-link {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+
+        width: 90%;
+        height: 32%;
+
+        transform: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 24px;
+        background: #d9d9d9;
+    }
+
+    /* Desktop hoofdmap verbergen */
+    #amstel-campus .Thetribe-folder {
+        width: auto;
+        height: auto;
+
+        background: none;
+        box-shadow: none;
+    }
+
+    #amstel-campus .Thetribe-folder::before,
+    #amstel-campus .Thetribe-folder::after {
+        display: none;
+    }
+
+    /* Het witte papiertje wordt gewone tekst */
+    #amstel-campus .Thetribe-folder .folder-paper {
+        position: static;
+
+        width: auto;
+        height: auto;
+
+        padding: 0;
+
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 42px;
+        font-weight: bold;
+
+        transform: none;
+    }
+
+
+    /* Alle gebouw-widgets */
+    #amstel-campus .folder-link {
+        position: absolute;
+        left: 5%;
+        right: auto;
+
+        width: 90%;
+        height: 15%;
+
+        transform: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 20px;
+        background: #d9d9d9;
+    }
+
+    /* Blauwe folder binnen de button weg */
+    #amstel-campus .folder-link .folder {
+        display: none;
+    }
+
+    /* Naam midden in widget */
+    #amstel-campus .folder-name {
+        margin: 0;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+        white-space: normal;
+        text-align: center;
+    }
+
+
+    /* Posities */
+    #amstel-campus .amstel-folder-one {
+        top: 41%;
+        bottom: auto;
+    }
+
+    #amstel-campus .amstel-folder-three {
+        top: 60%;
+        bottom: auto;
+    }
+
+    #amstel-campus .amstel-folder-two {
+        top: 79%;
+        bottom: auto;
+    }
+
+
+    /* Geen desktop hover-verplaatsing op mobile */
+    #amstel-campus .amstel-folder-one:hover,
+    #amstel-campus .amstel-folder-two:hover,
+    #amstel-campus .amstel-folder-three:hover,
+    #amstel-campus .amstel-folder-one:focus-visible,
+    #amstel-campus .amstel-folder-two:focus-visible,
+    #amstel-campus .amstel-folder-three:focus-visible {
+        transform: none;
+    }
+}
